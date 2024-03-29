@@ -1,0 +1,97 @@
+h1 {
+  font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: 800;
+  margin: 0 15px 20px 15px;
+}
+article {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 15px;
+  background: #222;
+  transition: all 0.2s ease-in-out;
+}
+article:hover {
+  background: #474747;
+  transition: all 0.2s ease-in-out;
+}
+article header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+article header img {
+  width: 40px;
+  border-radius: 5px;
+}
+#nameAccount {
+  display: flex;
+  flex-direction: column;
+}
+#nameAccount strong {
+  font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: 500;
+}
+#nameAccount span {
+  font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 200;
+  color: #ffffffaf;
+}
+.buttonFollow {
+  position: relative;
+  height: auto;
+  width: 100px;
+  padding: 5px 15px;
+  color: black;
+  font-size: 15px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI";
+  border: 0 solid black;
+  overflow: hidden;
+}
+.buttonFollowing {
+  background-color: transparent;
+  position: relative;
+  height: auto;
+  width: 100px;
+  padding: 5px 15px;
+  border: solid 1px white;
+  color: white;
+  font-size: 15px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI";
+  overflow: hidden;
+}
+.buttonFollowing:hover {
+  border: solid 1px red;
+}
+
+.buttonFollowing::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: "Unfollow";
+  top: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  border-radius: 20px;
+  background-color: #474747;
+  transform: translateY(-100%);
+}
+.buttonFollowing:hover::before {
+  transform: translateY(0);
+}
