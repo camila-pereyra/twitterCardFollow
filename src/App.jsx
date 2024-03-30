@@ -8,19 +8,16 @@ export const App = () => {
         avatar="https://i.pravatar.cc/150?img=16"
         name="Camila Pereyra"
         account="@camilabpereyra"
-        isFollowing={false}
       />
       <Follow
         avatar="https://i.pravatar.cc/150?img=69"
         name="Javier Diaz"
         account="@javidiaz"
-        isFollowing={false}
       />
       <Follow
         avatar="https://i.pravatar.cc/150?img=46"
         name="Pablo Leguizamon"
         account="@pabloleguizamon"
-        isFollowing={false}
       />
     </div>
   );

@@ -2,8 +2,11 @@ import { useState } from "react";
 import "./Follow.css";
 
 // eslint-disable-next-line react/prop-types
-export const Follow = ({ avatar, name, account, isFollowing }) => {
-  const [follow, setFollow] = useState(isFollowing);
+export const Follow = ({ avatar, name, account }) => {
+  const [follow, setFollow] = useState(false);
+  const text = !follow ? "Follow" : "Following";
+  const classNameButton = !follow ? "buttonFollow" : "buttonFollowing";
+
   const handleClick = () => {
     setFollow(!follow);
   };
@@ -18,11 +21,8 @@ export const Follow = ({ avatar, name, account, isFollowing }) => {
         </div>
       </header>
       <aside>
-        <button
-          className={!follow ? "buttonFollow" : "buttonFollowing"}
-          onClick={() => handleClick()}
-        >
-          {follow ? "Following" : "Follow"}
+        <button className={classNameButton} onClick={handleClick}>
+          {text}
         </button>
       </aside>
     </article>
